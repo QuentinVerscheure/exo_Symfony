@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %} {{gite.name}} {% endblock %}
+{% block body %}
+<h3>{{gite.name}}</h3>
+{{gite.description}}
+{{gite.contact}}
+{# {{gite.schedule_contact}} #}
+{{gite.localisation}}
+{{gite.surface}}
+{# {{gite.number_of_bedroom}} #}
+{# {{gite.number_of_bed}} #}
+{{gite.equipement}}
+{{gite.pets}}
+
+{% endblock %}
+
