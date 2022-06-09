@@ -66,8 +66,9 @@ class __TwigTemplate_275326d316c18d06dbea9cd7e082392a77f2f434ce819381f54ed52114b
         // line 14
         echo "        ";
         // line 15
-        echo "                <link rel=\"stylesheet\" href=\"../public/css/template_superawesome.css\">;
-        ";
+        echo "        ";
+        // line 16
+        echo "        ";
         // line 17
         echo "        ";
         // line 19
@@ -370,7 +371,7 @@ class __TwigTemplate_275326d316c18d06dbea9cd7e082392a77f2f434ce819381f54ed52114b
 
     public function getDebugInfo()
     {
-        return array (  344 => 64,  333 => 26,  323 => 25,  312 => 22,  302 => 21,  283 => 5,  140 => 65,  138 => 64,  116 => 47,  108 => 44,  100 => 41,  85 => 28,  83 => 25,  80 => 24,  77 => 21,  74 => 19,  72 => 17,  69 => 15,  67 => 14,  65 => 13,  60 => 9,  57 => 7,  53 => 5,  47 => 1,);
+        return array (  345 => 64,  334 => 26,  324 => 25,  313 => 22,  303 => 21,  284 => 5,  141 => 65,  139 => 64,  117 => 47,  109 => 44,  101 => 41,  86 => 28,  84 => 25,  81 => 24,  78 => 21,  75 => 19,  73 => 17,  71 => 16,  69 => 15,  67 => 14,  65 => 13,  60 => 9,  57 => 7,  53 => 5,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -389,7 +390,7 @@ class __TwigTemplate_275326d316c18d06dbea9cd7e082392a77f2f434ce819381f54ed52114b
         {# template_superawesome#}
         {# the CSS file lives at \"public/css/blog.css\" #}
         {# <link rel=\"stylesheet\" href=\"{{ asset('css/template_superawesome.css') }}\">; #}
-                <link rel=\"stylesheet\" href=\"../public/css/template_superawesome.css\">;
+        {# <link rel=\"stylesheet\" href=\"../public/css/template_superawesome.css\">; #}
         {# the JS file lives at \"public/bundles/acme/js/loader.js\" #}
         {# <script src=\"{{ asset('bundles/acme/js/html5shiv.js') }}\"></script>
         <script src=\"{{ asset('bundles/acme/js/template.js') }}\"></script> #}

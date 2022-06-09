@@ -5,6 +5,8 @@
 return [
     'admin_index' => [[], ['_controller' => 'App\\Controller\\Admin\\adminController::index'], [], [['text', '/admin']], [], [], []],
     'admin_gite_create' => [[], ['_controller' => 'App\\Controller\\Admin\\adminController::create'], [], [['text', '/admin/gite/create']], [], [], []],
+    'admin_gite_edit' => [['id'], ['_controller' => 'App\\Controller\\Admin\\adminController::edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/gite/create/edit']], [], [], []],
+    'admin_gite_delete' => [['id'], ['_controller' => 'App\\Controller\\Admin\\adminController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/gite/delete']], [], [], []],
     'gite_show' => [['id'], ['_controller' => 'App\\Controller\\GiteController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/gite']], [], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\homeController::index'], [], [['text', '/']], [], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\homeController::contact'], [], [['text', '/contact']], [], [], []],

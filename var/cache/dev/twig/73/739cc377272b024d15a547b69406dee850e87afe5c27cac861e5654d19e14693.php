@@ -89,8 +89,10 @@ class __TwigTemplate_6b462793b2b4d4959dedf72fd73c3928cbaaa8784b81a79314eb174a933
 
 
 ";
-        // line 9
+        // line 8
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 8, $this->source); })()), 'form_start');
         echo "
+
 <div class=\"row\">
     <div class=\"col-md-6\">
         ";
@@ -167,8 +169,10 @@ class __TwigTemplate_6b462793b2b4d4959dedf72fd73c3928cbaaa8784b81a79314eb174a933
 </div>
 
 ";
-        // line 56
+        // line 55
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 55, $this->source); })()), 'form_end');
         echo "
+
 
 ";
         
@@ -191,7 +195,7 @@ class __TwigTemplate_6b462793b2b4d4959dedf72fd73c3928cbaaa8784b81a79314eb174a933
 
     public function getDebugInfo()
     {
-        return array (  171 => 56,  160 => 47,  154 => 44,  146 => 39,  140 => 36,  132 => 31,  126 => 28,  120 => 25,  112 => 20,  106 => 17,  98 => 12,  93 => 9,  88 => 5,  78 => 4,  59 => 3,  36 => 1,);
+        return array (  173 => 55,  162 => 47,  156 => 44,  148 => 39,  142 => 36,  134 => 31,  128 => 28,  122 => 25,  114 => 20,  108 => 17,  100 => 12,  93 => 8,  88 => 5,  78 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -203,7 +207,7 @@ class __TwigTemplate_6b462793b2b4d4959dedf72fd73c3928cbaaa8784b81a79314eb174a933
 <h1>Ajouter un nouveau gite</h1>
 
 
-{# {{ form_start(formGite) }} #}
+{{ form_start(formGite) }}
 
 <div class=\"row\">
     <div class=\"col-md-6\">
@@ -250,7 +254,7 @@ class __TwigTemplate_6b462793b2b4d4959dedf72fd73c3928cbaaa8784b81a79314eb174a933
     <button type=\"reset\" class=\"btn btn-default\">annuler</button>
 </div>
 
-{# {{ form_end(formGite) }} #}
+{{ form_end(formGite) }}
 
 
 {% endblock %}

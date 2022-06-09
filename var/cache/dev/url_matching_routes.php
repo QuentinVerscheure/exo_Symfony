@@ -22,33 +22,39 @@ return [
     ],
     [ // $regexpList
         0 => '{^(?'
-                .'|/gite/([^/]++)(*:21)'
+                .'|/admin/gite/(?'
+                    .'|create/edit/([^/]++)(*:42)'
+                    .'|delete/([^/]++)(*:64)'
+                .')'
+                .'|/gite/([^/]++)(*:86)'
                 .'|/_(?'
-                    .'|error/(\\d+)(?:\\.([^/]++))?(*:59)'
-                    .'|wdt/([^/]++)(*:78)'
+                    .'|error/(\\d+)(?:\\.([^/]++))?(*:124)'
+                    .'|wdt/([^/]++)(*:144)'
                     .'|profiler/([^/]++)(?'
                         .'|/(?'
-                            .'|search/results(*:123)'
-                            .'|router(*:137)'
+                            .'|search/results(*:190)'
+                            .'|router(*:204)'
                             .'|exception(?'
-                                .'|(*:157)'
-                                .'|\\.css(*:170)'
+                                .'|(*:224)'
+                                .'|\\.css(*:237)'
                             .')'
                         .')'
-                        .'|(*:180)'
+                        .'|(*:247)'
                     .')'
                 .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
-        21 => [[['_route' => 'gite_show', '_controller' => 'App\\Controller\\GiteController::show'], ['id'], null, null, false, true, null]],
-        59 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
-        78 => [[['_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'], ['token'], null, null, false, true, null]],
-        123 => [[['_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'], ['token'], null, null, false, false, null]],
-        137 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
-        157 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
-        170 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
-        180 => [
+        42 => [[['_route' => 'admin_gite_edit', '_controller' => 'App\\Controller\\Admin\\adminController::edit'], ['id'], null, null, false, true, null]],
+        64 => [[['_route' => 'admin_gite_delete', '_controller' => 'App\\Controller\\Admin\\adminController::delete'], ['id'], null, null, false, true, null]],
+        86 => [[['_route' => 'gite_show', '_controller' => 'App\\Controller\\GiteController::show'], ['id'], null, null, false, true, null]],
+        124 => [[['_route' => '_preview_error', '_controller' => 'error_controller::preview', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
+        144 => [[['_route' => '_wdt', '_controller' => 'web_profiler.controller.profiler::toolbarAction'], ['token'], null, null, false, true, null]],
+        190 => [[['_route' => '_profiler_search_results', '_controller' => 'web_profiler.controller.profiler::searchResultsAction'], ['token'], null, null, false, false, null]],
+        204 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
+        224 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
+        237 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
+        247 => [
             [['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
