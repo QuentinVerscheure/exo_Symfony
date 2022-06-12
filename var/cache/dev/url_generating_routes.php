@@ -8,6 +8,8 @@ return [
     'admin_gite_edit' => [['id'], ['_controller' => 'App\\Controller\\Admin\\adminController::edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/gite/create/edit']], [], [], []],
     'admin_gite_delete' => [['id'], ['_controller' => 'App\\Controller\\Admin\\adminController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/gite/delete']], [], [], []],
     'gite_show' => [['id'], ['_controller' => 'App\\Controller\\GiteController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/gite']], [], [], []],
+    'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
+    'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],
     'home' => [[], ['_controller' => 'App\\Controller\\homeController::index'], [], [['text', '/']], [], [], []],
     'contact' => [[], ['_controller' => 'App\\Controller\\homeController::contact'], [], [['text', '/contact']], [], [], []],
     'recherche-gite' => [[], ['_controller' => 'App\\Controller\\homeController::rechercheGite'], [], [['text', '/recherche-gite']], [], [], []],

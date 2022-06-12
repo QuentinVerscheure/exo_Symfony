@@ -10,6 +10,8 @@ return [
     [ // $staticRoutes
         '/admin' => [[['_route' => 'admin_index', '_controller' => 'App\\Controller\\Admin\\adminController::index'], null, null, null, false, false, null]],
         '/admin/gite/create' => [[['_route' => 'admin_gite_create', '_controller' => 'App\\Controller\\Admin\\adminController::create'], null, null, null, false, false, null]],
+        '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
+        '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'home', '_controller' => 'App\\Controller\\homeController::index'], null, null, null, false, false, null]],
         '/contact' => [[['_route' => 'contact', '_controller' => 'App\\Controller\\homeController::contact'], null, null, null, false, false, null]],
         '/recherche-gite' => [[['_route' => 'recherche-gite', '_controller' => 'App\\Controller\\homeController::rechercheGite'], null, null, null, false, false, null]],
