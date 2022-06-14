@@ -38,4 +38,9 @@ superawesome: https://gettemplate.com/demo/superawesome/
 
 ## <ins>a faire</ins>
 
-- [ ] cacher les liens non accessible en fonction du log in (https://symfonycasts.com/screencast/easyadminbundle/dashboard ?)
+- [ ] cacher les liens non accessible en fonction du log in
+- [ ] changer type de l'input localisation du bien pour du text \src\Form\GiteSearchType.php l18 
+- [ ] corriger nom gite.qqch \templates\rechercheGite.html.twig l40
+- [ ] ajouter equipement dans la modif admin
+- [ ] retirer l'ancien champs equipement un peu partout
+- [ ] regarder faker symfony

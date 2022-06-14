@@ -60,7 +60,7 @@ class __TwigTemplate_b2c5de41934fe725d3b10db5f4bc9697564bdd2cb7815d153be74f51e42
 \t\thref=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor\" crossorigin=\"anonymous\">
 \t\t";
         // line 13
-        echo "\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css\">;
+        echo "\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css\">
 \t\t<link
 \t\trel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css\">
 
@@ -83,7 +83,7 @@ class __TwigTemplate_b2c5de41934fe725d3b10db5f4bc9697564bdd2cb7815d153be74f51e42
         if (array_key_exists("menu", $context)) {
             // line 30
             echo "
-\t\t\t\t";
+\t\t\t";
         } else {
             // line 32
             echo "\t\t\t\t\t";
@@ -127,7 +127,7 @@ class __TwigTemplate_b2c5de41934fe725d3b10db5f4bc9697564bdd2cb7815d153be74f51e42
         echo "\" aria-current=\"page\" href=\"/admin\">admin</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t</ul>
-\t\t\t\t\t\t<div class=\"d-flex\" >
+\t\t\t\t\t\t<div class=\"d-flex\">
 \t\t\t\t\t\t\t<ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
 \t\t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t\t<a class=\"nav-link\" aria-current=\"page\" href=\"/login\">login</a>
@@ -137,14 +137,16 @@ class __TwigTemplate_b2c5de41934fe725d3b10db5f4bc9697564bdd2cb7815d153be74f51e42
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</nav>
-\t\t\t<!-- header + nav -->
-\t\t</header>
+
+\t\t\t\t<!-- header + nav -->
+\t\t\t</header>
+\t\t</body>
 \t</body>
 \t<body>
 \t\t<div class=\"container\"> ";
-        // line 68
+        // line 70
         $this->displayBlock('body', $context, $blocks);
-        // line 69
+        // line 71
         echo "\t\t\t</div>
 \t\t</body>
 
@@ -202,7 +204,7 @@ class __TwigTemplate_b2c5de41934fe725d3b10db5f4bc9697564bdd2cb7815d153be74f51e42
 \t\t\t\t\t\t\t</h6>
 \t\t\t\t\t\t\t<p>
 \t\t\t\t\t\t\t\tHere you can use rows and columns to organize your footer content. Lorem ipsum
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                        dolor sit amet, consectetur adipisicing elit.
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                        dolor sit amet, consectetur adipisicing elit.
 \t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<!-- Grid column -->
@@ -364,7 +366,7 @@ class __TwigTemplate_b2c5de41934fe725d3b10db5f4bc9697564bdd2cb7815d153be74f51e42
 
     }
 
-    // line 68
+    // line 70
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -394,7 +396,7 @@ class __TwigTemplate_b2c5de41934fe725d3b10db5f4bc9697564bdd2cb7815d153be74f51e42
 
     public function getDebugInfo()
     {
-        return array (  368 => 68,  355 => 23,  345 => 22,  332 => 19,  322 => 18,  302 => 6,  148 => 69,  146 => 68,  124 => 51,  116 => 48,  108 => 45,  95 => 34,  92 => 33,  89 => 32,  85 => 30,  83 => 29,  77 => 25,  75 => 22,  72 => 21,  69 => 18,  63 => 13,  59 => 10,  56 => 8,  54 => 6,  47 => 1,);
+        return array (  370 => 70,  357 => 23,  347 => 22,  334 => 19,  324 => 18,  304 => 6,  150 => 71,  148 => 70,  124 => 51,  116 => 48,  108 => 45,  95 => 34,  92 => 33,  89 => 32,  85 => 30,  83 => 29,  77 => 25,  75 => 22,  72 => 21,  69 => 18,  63 => 13,  59 => 10,  56 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
@@ -411,7 +413,7 @@ class __TwigTemplate_b2c5de41934fe725d3b10db5f4bc9697564bdd2cb7815d153be74f51e42
 \t\t<link
 \t\thref=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor\" crossorigin=\"anonymous\">
 \t\t{# boostrap icon #}
-\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css\">;
+\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css\">
 \t\t<link
 \t\trel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css\">
 
@@ -429,7 +431,7 @@ class __TwigTemplate_b2c5de41934fe725d3b10db5f4bc9697564bdd2cb7815d153be74f51e42
 
 \t\t\t{% if menu is defined %}
 
-\t\t\t\t{% else %}
+\t\t\t{% else %}
 \t\t\t\t\t{% set menu = null %}
 \t\t\t{% endif %}
 
@@ -452,7 +454,7 @@ class __TwigTemplate_b2c5de41934fe725d3b10db5f4bc9697564bdd2cb7815d153be74f51e42
 \t\t\t\t\t\t\t\t<a class=\"nav-link {% if menu == \" index_admin\" %} active {% endif %}\" aria-current=\"page\" href=\"/admin\">admin</a>
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t</ul>
-\t\t\t\t\t\t<div class=\"d-flex\" >
+\t\t\t\t\t\t<div class=\"d-flex\">
 \t\t\t\t\t\t\t<ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
 \t\t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t\t<a class=\"nav-link\" aria-current=\"page\" href=\"/login\">login</a>
@@ -462,8 +464,10 @@ class __TwigTemplate_b2c5de41934fe725d3b10db5f4bc9697564bdd2cb7815d153be74f51e42
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</nav>
-\t\t\t<!-- header + nav -->
-\t\t</header>
+
+\t\t\t\t<!-- header + nav -->
+\t\t\t</header>
+\t\t</body>
 \t</body>
 \t<body>
 \t\t<div class=\"container\"> {% block body %}{% endblock %}
@@ -524,7 +528,7 @@ class __TwigTemplate_b2c5de41934fe725d3b10db5f4bc9697564bdd2cb7815d153be74f51e42
 \t\t\t\t\t\t\t</h6>
 \t\t\t\t\t\t\t<p>
 \t\t\t\t\t\t\t\tHere you can use rows and columns to organize your footer content. Lorem ipsum
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                        dolor sit amet, consectetur adipisicing elit.
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                        dolor sit amet, consectetur adipisicing elit.
 \t\t\t\t\t\t\t</p>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<!-- Grid column -->

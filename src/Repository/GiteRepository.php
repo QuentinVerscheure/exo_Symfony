@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Gite;
+use App\Entity\GiteSearch;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -37,6 +38,45 @@ class GiteRepository extends ServiceEntityRepository
         if ($flush) {
             $this->getEntityManager()->flush();
         }
+    }
+
+    /**
+    * @return Gite[] Returns an array of Gite objects
+    */
+    public function findGiteSearch(GiteSearch $search)
+    {
+        $query = $this->createQueryBuilder('g');
+
+        if ($search->getSearchLocalisation()) {
+            $query = $query
+            ->andWhere("g.localisation = :SearchLocalisation")
+            ->setParameter('SearchLocalisation', $search->getSearchLocalisation());
+        }
+        if ($search->getMinsurface()) {
+            $query = $query
+            ->andWhere("g.surface >= :minSurface")
+            ->setParameter('minSurface', $search->getMinSurface());
+        }
+        if ($search->getMinnumberOfBedroom()) {
+            $query = $query
+            ->andWhere("g.number_of_bedroom >= :minnumberOfBedroom")
+            ->setParameter('minnumberOfBedroom', $search->getMinnumberOfBedroom());
+        }
+        if ($search->getMinnumberOfBed()) {
+            $query = $query
+            ->andWhere("g.number_Of_bed >= :minnumberOfBed")
+            ->setParameter('minnumberOfBed', $search->getMinnumberOfBed());
+        }
+        if ($search->getIsOkPets()) {
+            $query = $query
+            ->andWhere("g.pets = :isOkPets")
+            ->setParameter('isOkPets', $search->getIsOkPets());
+        }
+        $query = $query
+            ->getQuery()
+            ->GetResult();
+
+            return $query;
     }
 }
 

@@ -2,6 +2,7 @@
 
 namespace App\DataFixtures;
 
+use App\Entity\Equipement;
 use App\Entity\Gite;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
@@ -21,7 +22,6 @@ class GiteFixtures extends Fixture
                 ->setSurface(random_int(30,300))
                 ->setNumberOfBedroom(random_int(1,5))
                 ->setNumberOfBed(random_int(1,7))
-                ->setEquipement("equipement gite n°" . $i)
                 ->setPets(true);
 
                 $manager->persist($gite);

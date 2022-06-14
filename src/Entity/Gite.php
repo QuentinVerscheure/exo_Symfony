@@ -3,7 +3,11 @@
 namespace App\Entity;
 
 use App\Repository\GiteRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * @ORM\Entity(repositoryClass=GiteRepository::class)
@@ -19,16 +23,30 @@ class Gite
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     *      min = 5,
+     *      max = 50,
+     *      minMessage = "Votre titre doit etre de minimum 5 characters",
+     *      maxMessage = "Votre titre doit etre de maximum 50 characters"
+     * )
      */
     private $name;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\Length(
+     *      min = 50,
+     *      max = 1000,
+     *      minMessage = "Votre titre doit etre de minimum 50 characters",
+     *      maxMessage = "Votre titre doit etre de maximum 1000 characters"
+     * )
      */
     private $description;
 
     /**
-     * @ORM\Column(type="text")
+     * @Assert\Email(
+     *     message = "l'email '{{ value }}' n'est pas un email valide"
+     * )
      */
     private $contact;
 
@@ -44,28 +62,45 @@ class Gite
 
     /**
      * @ORM\Column(type="float")
+     * @Assert\Range(
+     *          min=30,
+     *          max=500,
+     *          minMessage="La surface minimal doit etre de  {{ min }} m²",
+     *          maxMessage="La surface maximal doit etre de  {{ max }} m²"
+     * )
      */
     private $surface;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\Positive(
+     *          message="le nombre de chambre ne peut etre négatif"
+     * )
      */
     private $numberOfBedroom;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\Positive(
+     *          message="le nombre de lit ne peut etre négatif"
+     * )
      */
     private $numberOfBed;
-
-    /**
-     * @ORM\Column(type="text", nullable=true)
-     */
-    private $equipement;
 
     /**
      * @ORM\Column(type="boolean", nullable=true)
      */
     private $Pets;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=equipement::class, inversedBy="gites")
+     */
+    private $equipements;
+
+    public function __construct()
+    {
+        $this->equipements = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -168,18 +203,6 @@ class Gite
         return $this;
     }
 
-    public function getEquipement(): ?string
-    {
-        return $this->equipement;
-    }
-
-    public function setEquipement(?string $equipement): self
-    {
-        $this->equipement = $equipement;
-
-        return $this;
-    }
-
     public function isPets(): ?bool
     {
         return $this->Pets;
@@ -188,6 +211,30 @@ class Gite
     public function setPets(?bool $Pets): self
     {
         $this->Pets = $Pets;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, equipement>
+     */
+    public function getEquipements(): Collection
+    {
+        return $this->equipements;
+    }
+
+    public function addEquipement(equipement $equipement): self
+    {
+        if (!$this->equipements->contains($equipement)) {
+            $this->equipements[] = $equipement;
+        }
+
+        return $this;
+    }
+
+    public function removeEquipement(equipement $equipement): self
+    {
+        $this->equipements->removeElement($equipement);
 
         return $this;
     }

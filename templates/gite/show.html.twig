@@ -12,6 +12,15 @@
 {# {{gite.number_of_bed}} #}
 {{gite.equipement}}
 {{gite.pets}}
+<h2>equipements</h2>
+<div class="col-md-6">
+    <table class="table">
+        {% for equipement in gite.equipements%}
+        <tr>
+            <td>{{ equipement.name}}</td>
+        </tr>
+    </table>
+</div>
 
 {% endblock %}
 

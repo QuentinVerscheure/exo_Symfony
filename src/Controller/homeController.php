@@ -5,7 +5,10 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Gite;
+use App\Entity\GiteSearch;
+use App\Form\GiteSearchType;
 use Doctrine\Persistence\ManagerRegistry;
+use Symfony\Component\HttpFoundation\Request;
 
 class homeController extends AbstractController
 {
@@ -16,35 +19,13 @@ class homeController extends AbstractController
      */
     public function index(ManagerRegistry $doctrine)
     {
-
+       
         $repository = $doctrine->getRepository(Gite::class);
-
         $gites = $repository->findAll();
-
-        // dump($gite);
-
-        // $manager = $doctrine->getManager();
-
-        // $gite = new Gite();
-        // $gite
-        //         ->setname("mon 1er gite")
-        //         ->setdescription("mon 1er gite description")
-        //         ->setcontact("mon 1er gite contact")
-        //         ->setscheduleContact("horaire de contact")
-        //         ->setlocalisation("mon 1er gite localisation")
-        //         ->setsurface(150,36)
-        //         ->setnumberOfBedroom(3)
-        //         ->setnumberOfBed(5)
-        //         ->setequipement("four, cuisinière, barbecue")
-        //         ->setPets(true);
-
-        // $manager->persist($gite);
-
-        // $manager->flush();
 
         return $this->render("index.html.twig", [
             "menu" => "index",
-            "gites" => $gites
+            "gites" => $gites,
         ]);
     }
 
@@ -61,10 +42,24 @@ class homeController extends AbstractController
     /**
      * @Route("/recherche-gite", name="recherche-gite")
      */
-    public function rechercheGite()
+    public function rechercheGite(ManagerRegistry $doctrine, Request $request)
     {
+
+        $search = new GiteSearch();
+        //creation du formulaire de recherche
+        $form = $this->createForm(GiteSearchType::class, $search);
+        $form->handleRequest($request);
+        
+
+        /** @var GiteRepository $repository */
+        $repository = $doctrine->getRepository(Gite::class);
+        $gites = $repository->findGiteSearch($search);
+
+
         return $this->render("rechercheGite.html.twig", [
             "menu" => "rechercheGite",
+            "gites" => $gites,
+            "form" => $form->createView()
         ]);
     }
 

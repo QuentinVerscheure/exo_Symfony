@@ -19,7 +19,6 @@ class GiteController extends AbstractController
         $gite = $repo->find($id);
 
         return $this->render("gite/show.html.twig", [
-            "menu" => null,
             "gite"=>$gite
         ]);
     }
