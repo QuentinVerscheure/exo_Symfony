@@ -134,7 +134,10 @@ class __TwigTemplate_4b6b873238f60db7362e9be3babd48196fc5a978b594c17ff453306d4e9
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 28, $this->source); })()), 'form_end');
         echo "
     </div>
-
+";
+        // line 30
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\DumpExtension']->dump($this->env, $context, (isset($context["gites"]) || array_key_exists("gites", $context) ? $context["gites"] : (function () { throw new RuntimeError('Variable "gites" does not exist.', 30, $this->source); })()));
+        echo "
     <div class=\"row justify-content-around\">
     ";
         // line 32
@@ -142,29 +145,40 @@ class __TwigTemplate_4b6b873238f60db7362e9be3babd48196fc5a978b594c17ff453306d4e9
         $context['_seq'] = twig_ensure_traversable((isset($context["gites"]) || array_key_exists("gites", $context) ? $context["gites"] : (function () { throw new RuntimeError('Variable "gites" does not exist.', 32, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["gite"]) {
             // line 33
-            echo "        <div class=\"card col-4\" style=\"width: 18rem;\">
-            <img class=\"card-img-top\" src='build/img/architecture-1477098_960_720.jpg' alt=\"Card image cap\">
+            echo "
+        <div class=\"card col-4\" style=\"width: 18rem;\">
+            <img class=\"card-img-top\" src='build/img/";
+            // line 35
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gite"], "picture", [], "any", false, false, false, 35), "html", null, true);
+            echo ".jpg' alt=\"Card image cap\">
             <div class=\"card-body\">
                 <h5 class=\"card-title\">";
-            // line 36
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gite"], "name", [], "any", false, false, false, 36), "html", null, true);
+            // line 37
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gite"], "name", [], "any", false, false, false, 37), "html", null, true);
             echo "</h5>
                 <p class=\"card-text\">";
-            // line 37
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gite"], "description", [], "any", false, false, false, 37), "html", null, true);
+            // line 38
+            echo twig_escape_filter($this->env, (((1 === twig_compare(twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gite"], "description", [], "any", false, false, false, 38)), 50))) ? ((twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["gite"], "description", [], "any", false, false, false, 38), 0, 50) . "...")) : (twig_get_attribute($this->env, $this->source, $context["gite"], "description", [], "any", false, false, false, 38))), "html", null, true);
             echo ".</p>
                 <p class=\"card-text\">localisation: ";
-            // line 38
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gite"], "localisation", [], "any", false, false, false, 38), "html", null, true);
+            // line 39
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gite"], "localisation", [], "any", false, false, false, 39), "html", null, true);
             echo ".</p>
                 <p class=\"card-text\">surface: ";
-            // line 39
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gite"], "surface", [], "any", false, false, false, 39), "html", null, true);
+            // line 40
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gite"], "surface", [], "any", false, false, false, 40), "html", null, true);
             echo " m².</p>
-                ";
+                <p class=\"card-text\">Nbr de chambres: ";
+            // line 41
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gite"], "numberOfBedroom", [], "any", false, false, false, 41), "html", null, true);
+            echo ".</p>
+                <p class=\"card-text\">Nbr de couchages: ";
             // line 42
-            echo "                <a href=\"";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gite_show", ["id" => twig_get_attribute($this->env, $this->source, $context["gite"], "id", [], "any", false, false, false, 42)]), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["gite"], "numberOfBed", [], "any", false, false, false, 42), "html", null, true);
+            echo ".</p>
+                <a href=\"";
+            // line 43
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gite_show", ["id" => twig_get_attribute($this->env, $this->source, $context["gite"], "id", [], "any", false, false, false, 43)]), "html", null, true);
             echo "\" class=\"btn btn-primary\">Voir le gite</a>
             </div>
         </div>
@@ -173,7 +187,7 @@ class __TwigTemplate_4b6b873238f60db7362e9be3babd48196fc5a978b594c17ff453306d4e9
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['gite'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 46
+        // line 47
         echo "    </div>
 
 ";
@@ -197,7 +211,7 @@ class __TwigTemplate_4b6b873238f60db7362e9be3babd48196fc5a978b594c17ff453306d4e9
 
     public function getDebugInfo()
     {
-        return array (  177 => 46,  166 => 42,  162 => 39,  158 => 38,  154 => 37,  150 => 36,  145 => 33,  141 => 32,  134 => 28,  129 => 26,  123 => 23,  117 => 20,  111 => 17,  105 => 14,  99 => 11,  94 => 9,  78 => 4,  59 => 3,  36 => 1,);
+        return array (  191 => 47,  181 => 43,  177 => 42,  173 => 41,  169 => 40,  165 => 39,  161 => 38,  157 => 37,  152 => 35,  148 => 33,  144 => 32,  139 => 30,  134 => 28,  129 => 26,  123 => 23,  117 => 20,  111 => 17,  105 => 14,  99 => 11,  94 => 9,  78 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -231,18 +245,19 @@ class __TwigTemplate_4b6b873238f60db7362e9be3babd48196fc5a978b594c17ff453306d4e9
         </div>
     {{ form_end(form) }}
     </div>
-
+{{ dump(gites) }}
     <div class=\"row justify-content-around\">
     {% for gite in gites %}
+
         <div class=\"card col-4\" style=\"width: 18rem;\">
-            <img class=\"card-img-top\" src='build/img/architecture-1477098_960_720.jpg' alt=\"Card image cap\">
+            <img class=\"card-img-top\" src='build/img/{{gite.picture}}.jpg' alt=\"Card image cap\">
             <div class=\"card-body\">
                 <h5 class=\"card-title\">{{gite.name}}</h5>
-                <p class=\"card-text\">{{gite.description}}.</p>
+                <p class=\"card-text\">{{gite.description|length > 50 ? gite.description|slice(0, 50) ~ '...' : gite.description}}.</p>
                 <p class=\"card-text\">localisation: {{gite.localisation}}.</p>
                 <p class=\"card-text\">surface: {{gite.surface}} m².</p>
-                {# <p class=\"card-text\">Nbr de chambres: {{gite.number_of_bedroom}}.</p>
-                <p class=\"card-text\">Nbr de couchages: {{gite.number_of_bed}}.</p> #}
+                <p class=\"card-text\">Nbr de chambres: {{gite.numberOfBedroom}}.</p>
+                <p class=\"card-text\">Nbr de couchages: {{gite.numberOfBed}}.</p>
                 <a href=\"{{path('gite_show',{id:gite.id})}}\" class=\"btn btn-primary\">Voir le gite</a>
             </div>
         </div>

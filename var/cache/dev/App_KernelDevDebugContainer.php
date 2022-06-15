@@ -16,6 +16,6 @@ if (!\class_exists(App_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerGcls2ds\App_KernelDevDebugContainer([
     'container.build_hash' => 'Gcls2ds',
-    'container.build_id' => 'd4ed971c',
-    'container.build_time' => 1655310428,
+    'container.build_id' => '3880dc02',
+    'container.build_time' => 1655326655,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerGcls2ds');

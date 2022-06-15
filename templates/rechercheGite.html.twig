@@ -27,18 +27,19 @@
         </div>
     {{ form_end(form) }}
     </div>
-
+{{ dump(gites) }}
     <div class="row justify-content-around">
     {% for gite in gites %}
+
         <div class="card col-4" style="width: 18rem;">
-            <img class="card-img-top" src='build/img/architecture-1477098_960_720.jpg' alt="Card image cap">
+            <img class="card-img-top" src='build/img/{{gite.picture}}.jpg' alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">{{gite.name}}</h5>
-                <p class="card-text">{{gite.description}}.</p>
+                <p class="card-text">{{gite.description|length > 50 ? gite.description|slice(0, 50) ~ '...' : gite.description}}.</p>
                 <p class="card-text">localisation: {{gite.localisation}}.</p>
                 <p class="card-text">surface: {{gite.surface}} m².</p>
-                {# <p class="card-text">Nbr de chambres: {{gite.number_of_bedroom}}.</p>
-                <p class="card-text">Nbr de couchages: {{gite.number_of_bed}}.</p> #}
+                <p class="card-text">Nbr de chambres: {{gite.numberOfBedroom}}.</p>
+                <p class="card-text">Nbr de couchages: {{gite.numberOfBed}}.</p>
                 <a href="{{path('gite_show',{id:gite.id})}}" class="btn btn-primary">Voir le gite</a>
             </div>
         </div>

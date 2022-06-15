@@ -18,7 +18,7 @@ class GiteFixtures extends Fixture
             $randomPictureNumber = random_int(1,5);
             $setPicture="";
             for ($j=0; $j < $randomPictureNumber; $j++) {
-                $setPicture .= "picture(" . random_int(1,68) . ")";
+                $setPicture .= "picture (" . random_int(1,68) . ")";
                 $setPicture .= ",";
             }
 
