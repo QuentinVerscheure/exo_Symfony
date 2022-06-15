@@ -2,25 +2,35 @@
 
 {% block title %} {{gite.name}} {% endblock %}
 {% block body %}
-<h3>{{gite.name}}</h3>
-{{gite.description}}
-{{gite.contact}}
-{# {{gite.schedule_contact}} #}
-{{gite.localisation}}
-{{gite.surface}}
-{# {{gite.number_of_bedroom}} #}
-{# {{gite.number_of_bed}} #}
-{{gite.equipement}}
-{{gite.pets}}
-<h2>equipements</h2>
-<div class="col-md-6">
-    <table class="table">
-        {% for equipement in gite.equipements%}
-        <tr>
-            <td>{{ equipement.name}}</td>
-        </tr>
-    </table>
-</div>
 
+<div class="col-12 mt-5">
+    <h3>{{gite.name}}</h3>
+    {{gite.description}}
+</div>
+<div class="row mt-5">
+    <div class="col-md-6">
+        <h5>Renseignement</h5>
+            <p>Contact:{{gite.contact}}</p>
+            <p>Horaire de contact: {{gite.scheduleContact}}</p>
+            <p>localisation: {{gite.localisation}}</p>
+            <p>Surface: {{gite.surface}}m²</p>
+            <p>Nbr de chambres: {{gite.numberOfBedroom}}</p>
+            <p>Nbr de lits: {{gite.numberOfBed}}</p>
+            <p>Animaux 
+            {% if gite.pets == false %} non  {% endif %}
+             accéptés</p>
+    </div>
+
+    <div class="col-md-6">
+    <h5>equipements</h5>
+        <table class="table">
+            {% for equipement in gite.equipements%}
+            <tr>
+                <td>{{ equipement.name}}</td>
+            </tr>
+        {% endfor %}
+        </table>
+    </div>
+</div>
 {% endblock %}
 

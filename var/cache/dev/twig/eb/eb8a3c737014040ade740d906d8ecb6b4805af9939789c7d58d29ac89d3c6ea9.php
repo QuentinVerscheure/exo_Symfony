@@ -46,230 +46,80 @@ class __TwigTemplate_275326d316c18d06dbea9cd7e082392a77f2f434ce819381f54ed52114b
         // line 1
         echo "<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset=\"UTF-8\">
-        <title>";
-        // line 5
+\t<head>
+\t\t<meta charset=\"UTF-8\">
+\t\t<title>
+\t\t\t";
+        // line 6
         $this->displayBlock('title', $context, $blocks);
-        echo "</title>
-        ";
-        // line 7
-        echo "        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor\" crossorigin=\"anonymous\">
-        ";
-        // line 9
-        echo "        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css\">
-        <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css\">
-
-        ";
+        // line 8
+        echo "\t\t</title>
+\t\t";
+        // line 10
+        echo "\t\t";
+        // line 12
+        echo "\t\t";
         // line 13
-        echo "        ";
-        // line 14
-        echo "        ";
-        // line 15
-        echo "        ";
-        // line 16
-        echo "        ";
-        // line 17
-        echo "        ";
-        // line 19
+        echo "\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css\">
+\t\t<link
+\t\trel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css\">
+
+\t\t<!-- Bootstrap itself -->
+\t\t<link
+\t\thref=\"http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\">
+\t\t<!-- Icons -->
+\t\t<link
+\t\thref=\"http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css\" rel=\"stylesheet\">
+\t\t<!-- Fonts -->
+\t\t<link
+\t\trel=\"stylesheet\" href=\"http://fonts.googleapis.com/css?family=Open+Sans:300,400,700\">
+\t\t<!-- Custom styles -->
+\t\t<link rel=\"stylesheet\" href=\"css/template_superawesome.css\">
+
+\t\t";
+        // line 30
+        echo "\t\t";
+        // line 31
+        echo "        <link rel=\"stylesheet\" href=\"";
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/template_superawesome.css"), "html", null, true);
+        echo "\"> ;
+\t\t";
+        // line 33
+        echo "\t\t";
+        // line 34
         echo "
-        ";
-        // line 21
-        echo "        ";
+
+\t\t";
+        // line 37
+        echo "\t\t";
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 24
+        // line 40
         echo "
-        ";
-        // line 25
-        $this->displayBlock('javascripts', $context, $blocks);
-        // line 28
-        echo "    </head>
-    <body>
-        <header>
-                    <!-- header + nav -->
-                <nav class=\"navbar navbar-expand-lg bg-light\">
-            <div class=\"container-fluid\">
-                <a class=\"navbar-brand\" href=\"/\">Progica</a>
-                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-                <span class=\"navbar-toggler-icon\"></span>
-                </button>
-                <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
-                <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link ";
+\t\t";
         // line 41
-        if (((0 === twig_compare((isset($context["menu"]) || array_key_exists("menu", $context) ? $context["menu"] : (function () { throw new RuntimeError('Variable "menu" does not exist.', 41, $this->source); })()), "rechercheGite")) || (0 === twig_compare((isset($context["menu"]) || array_key_exists("menu", $context) ? $context["menu"] : (function () { throw new RuntimeError('Variable "menu" does not exist.', 41, $this->source); })()), "detailGite")))) {
-            echo " active ";
-        }
-        echo "\" aria-current=\"page\" href=\"/recherche-gite\">Rechercher un gite</a>
-                    </li>
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link ";
+        $this->displayBlock('javascripts', $context, $blocks);
         // line 44
-        if ((0 === twig_compare((isset($context["menu"]) || array_key_exists("menu", $context) ? $context["menu"] : (function () { throw new RuntimeError('Variable "menu" does not exist.', 44, $this->source); })()), "contact"))) {
-            echo " active ";
-        }
-        echo "\" aria-current=\"page\" href=\"/contact\">Contact</a>
-                    </li>
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link ";
+        echo "\t</head>
+
+\t<body>
+";
         // line 47
-        if ((0 === twig_compare((isset($context["menu"]) || array_key_exists("menu", $context) ? $context["menu"] : (function () { throw new RuntimeError('Variable "menu" does not exist.', 47, $this->source); })()), "index_admin"))) {
-            echo " active ";
-        }
-        echo "\" aria-current=\"page\" href=\"/admin\">admin</a>
-                    </li>
-                </ul>
-                <form class=\"d-flex\" role=\"search\">
-                    <input class=\"form-control me-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
-                    <button class=\"btn btn-outline-success\" type=\"submit\">Search</button>
-                </form>
-                </div>
-            </div>
-            </nav>
-        <!-- header + nav -->
-        </header>
-
-
-
-        <body>
-            <div class=\"container\">
-                ";
-        // line 64
         $this->displayBlock('body', $context, $blocks);
-        // line 65
-        echo "            </div>
-        </body>
+        // line 48
+        echo "
+\t</body>
 
 
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js\"></script>
+<script src=\"";
+        // line 54
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/superAwesome/template.js"), "html", null, true);
+        echo "\"></script>
 
-        <!-- Footer -->
-        <footer class=\"text-center text-lg-start bg-light text-muted\">
-            <!-- Section: Social media -->
-            <section
-                class=\"d-flex justify-content-center justify-content-lg-between p-4 border-bottom\"
-            >
-                <!-- Left -->
-                <div class=\"me-5 d-none d-lg-block\">
-                <span>Get connected with us on social networks:</span>
-                </div>
-                <!-- Left -->
-
-                <!-- Right -->
-                <div>
-                <a href=\"\" class=\"me-4 text-reset\">
-                    <i class=\"fab fa-facebook-f\"></i>
-                </a>
-                <a href=\"\" class=\"me-4 text-reset\">
-                    <i class=\"fab fa-twitter\"></i>
-                </a>
-                <a href=\"\" class=\"me-4 text-reset\">
-                    <i class=\"fab fa-google\"></i>
-                </a>
-                <a href=\"\" class=\"me-4 text-reset\">
-                    <i class=\"fab fa-instagram\"></i>
-                </a>
-                <a href=\"\" class=\"me-4 text-reset\">
-                    <i class=\"fab fa-linkedin\"></i>
-                </a>
-                <a href=\"\" class=\"me-4 text-reset\">
-                    <i class=\"fab fa-github\"></i>
-                </a>
-                </div>
-                <!-- Right -->
-            </section>
-            <!-- Section: Social media -->
-
-            <!-- Section: Links  -->
-            <section class=\"\">
-                <div class=\"container text-center text-md-start mt-5\">
-                <!-- Grid row -->
-                <div class=\"row mt-3\">
-                    <!-- Grid column -->
-                    <div class=\"col-md-3 col-lg-4 col-xl-3 mx-auto mb-4\">
-                    <!-- Content -->
-                    <h6 class=\"text-uppercase fw-bold mb-4\">
-                        <i class=\"fas fa-gem me-3\"></i>Company name
-                    </h6>
-                    <p>
-                        Here you can use rows and columns to organize your footer content. Lorem ipsum
-                        dolor sit amet, consectetur adipisicing elit.
-                    </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class=\"col-md-2 col-lg-2 col-xl-2 mx-auto mb-4\">
-                    <!-- Links -->
-                    <h6 class=\"text-uppercase fw-bold mb-4\">
-                        Products
-                    </h6>
-                    <p>
-                        <a href=\"#!\" class=\"text-reset\">Angular</a>
-                    </p>
-                    <p>
-                        <a href=\"#!\" class=\"text-reset\">React</a>
-                    </p>
-                    <p>
-                        <a href=\"#!\" class=\"text-reset\">Vue</a>
-                    </p>
-                    <p>
-                        <a href=\"#!\" class=\"text-reset\">Laravel</a>
-                    </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class=\"col-md-3 col-lg-2 col-xl-2 mx-auto mb-4\">
-                    <!-- Links -->
-                    <h6 class=\"text-uppercase fw-bold mb-4\">
-                        Useful links
-                    </h6>
-                    <p>
-                        <a href=\"#!\" class=\"text-reset\">Pricing</a>
-                    </p>
-                    <p>
-                        <a href=\"#!\" class=\"text-reset\">Settings</a>
-                    </p>
-                    <p>
-                        <a href=\"#!\" class=\"text-reset\">Orders</a>
-                    </p>
-                    <p>
-                        <a href=\"#!\" class=\"text-reset\">Help</a>
-                    </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class=\"col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4\">
-                    <!-- Links -->
-                    <h6 class=\"text-uppercase fw-bold mb-4\">
-                        Contact
-                    </h6>
-                    <p><i class=\"fas fa-home me-3\"></i> New York, NY 10012, US</p>
-                    <p>
-                        <i class=\"fas fa-envelope me-3\"></i>
-                        info@example.com
-                    </p>
-                    <p><i class=\"fas fa-phone me-3\"></i> + 01 234 567 88</p>
-                    <p><i class=\"fas fa-print me-3\"></i> + 01 234 567 89</p>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
-                </div>
-            </section>
-            <!-- Section: Links  -->
-
-            <!-- Copyright -->
-            <div class=\"text-center p-4\" style=\"background-color: rgba(0, 0, 0, 0.05);\">
-                © 2021 Copyright:
-                <a class=\"text-reset fw-bold\" href=\"https://mdbootstrap.com/\">MDBootstrap.com</a>
-            </div>
-            <!-- Copyright -->
-        </footer>
-        <!-- Footer -->
-    </body>
+";
+        // line 57
+        echo "
 </html>
 ";
         
@@ -280,7 +130,7 @@ class __TwigTemplate_275326d316c18d06dbea9cd7e082392a77f2f434ce819381f54ed52114b
 
     }
 
-    // line 5
+    // line 6
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -290,7 +140,8 @@ class __TwigTemplate_275326d316c18d06dbea9cd7e082392a77f2f434ce819381f54ed52114b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Welcome!";
+        echo "Welcome!
+\t\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -299,7 +150,7 @@ class __TwigTemplate_275326d316c18d06dbea9cd7e082392a77f2f434ce819381f54ed52114b
 
     }
 
-    // line 21
+    // line 37
     public function block_stylesheets($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -309,9 +160,11 @@ class __TwigTemplate_275326d316c18d06dbea9cd7e082392a77f2f434ce819381f54ed52114b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        // line 22
+        // line 38
+        echo "\t\t\t";
+        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackLinkTags("app");
         echo "
-        ";
+\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -320,7 +173,7 @@ class __TwigTemplate_275326d316c18d06dbea9cd7e082392a77f2f434ce819381f54ed52114b
 
     }
 
-    // line 25
+    // line 41
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -330,9 +183,11 @@ class __TwigTemplate_275326d316c18d06dbea9cd7e082392a77f2f434ce819381f54ed52114b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 26
+        // line 42
+        echo "\t\t\t";
+        echo $this->extensions['Symfony\WebpackEncoreBundle\Twig\EntryFilesTwigExtension']->renderWebpackScriptTags("app");
         echo "
-        ";
+\t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -341,7 +196,7 @@ class __TwigTemplate_275326d316c18d06dbea9cd7e082392a77f2f434ce819381f54ed52114b
 
     }
 
-    // line 64
+    // line 47
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -371,207 +226,68 @@ class __TwigTemplate_275326d316c18d06dbea9cd7e082392a77f2f434ce819381f54ed52114b
 
     public function getDebugInfo()
     {
-        return array (  345 => 64,  334 => 26,  324 => 25,  313 => 22,  303 => 21,  284 => 5,  141 => 65,  139 => 64,  117 => 47,  109 => 44,  101 => 41,  86 => 28,  84 => 25,  81 => 24,  78 => 21,  75 => 19,  73 => 17,  71 => 16,  69 => 15,  67 => 14,  65 => 13,  60 => 9,  57 => 7,  53 => 5,  47 => 1,);
+        return array (  200 => 47,  187 => 42,  177 => 41,  164 => 38,  154 => 37,  134 => 6,  122 => 57,  117 => 54,  109 => 48,  107 => 47,  102 => 44,  100 => 41,  97 => 40,  94 => 37,  90 => 34,  88 => 33,  83 => 31,  81 => 30,  63 => 13,  61 => 12,  59 => 10,  56 => 8,  54 => 6,  47 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset=\"UTF-8\">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# boostrap #}
-        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor\" crossorigin=\"anonymous\">
-        {# boostrap icon #}
-        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css\">
-        <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css\">
+\t<head>
+\t\t<meta charset=\"UTF-8\">
+\t\t<title>
+\t\t\t{% block title %}Welcome!
+\t\t\t{% endblock %}
+\t\t</title>
+\t\t{# boostrap #}
+\t\t{# <link
+\t\thref=\"https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor\" crossorigin=\"anonymous\"> #}
+\t\t{# boostrap icon #}
+\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css\">
+\t\t<link
+\t\trel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css\">
 
-        {# template_superawesome#}
-        {# the CSS file lives at \"public/css/blog.css\" #}
-        {# <link rel=\"stylesheet\" href=\"{{ asset('css/template_superawesome.css') }}\">; #}
-        {# <link rel=\"stylesheet\" href=\"../public/css/template_superawesome.css\">; #}
-        {# the JS file lives at \"public/bundles/acme/js/loader.js\" #}
-        {# <script src=\"{{ asset('bundles/acme/js/html5shiv.js') }}\"></script>
-        <script src=\"{{ asset('bundles/acme/js/template.js') }}\"></script> #}
+\t\t<!-- Bootstrap itself -->
+\t\t<link
+\t\thref=\"http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css\" rel=\"stylesheet\" type=\"text/css\">
+\t\t<!-- Icons -->
+\t\t<link
+\t\thref=\"http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css\" rel=\"stylesheet\">
+\t\t<!-- Fonts -->
+\t\t<link
+\t\trel=\"stylesheet\" href=\"http://fonts.googleapis.com/css?family=Open+Sans:300,400,700\">
+\t\t<!-- Custom styles -->
+\t\t<link rel=\"stylesheet\" href=\"css/template_superawesome.css\">
 
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-
-        {% endblock %}
-
-        {% block javascripts %}
-
-        {% endblock %}
-    </head>
-    <body>
-        <header>
-                    <!-- header + nav -->
-                <nav class=\"navbar navbar-expand-lg bg-light\">
-            <div class=\"container-fluid\">
-                <a class=\"navbar-brand\" href=\"/\">Progica</a>
-                <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
-                <span class=\"navbar-toggler-icon\"></span>
-                </button>
-                <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
-                <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link {% if menu == \"rechercheGite\" or menu == \"detailGite\" %} active {% endif %}\" aria-current=\"page\" href=\"/recherche-gite\">Rechercher un gite</a>
-                    </li>
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link {% if menu == \"contact\" %} active {% endif %}\" aria-current=\"page\" href=\"/contact\">Contact</a>
-                    </li>
-                    <li class=\"nav-item\">
-                        <a class=\"nav-link {% if menu == \"index_admin\" %} active {% endif %}\" aria-current=\"page\" href=\"/admin\">admin</a>
-                    </li>
-                </ul>
-                <form class=\"d-flex\" role=\"search\">
-                    <input class=\"form-control me-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">
-                    <button class=\"btn btn-outline-success\" type=\"submit\">Search</button>
-                </form>
-                </div>
-            </div>
-            </nav>
-        <!-- header + nav -->
-        </header>
+\t\t{# template_superawesome#}
+\t\t{# the CSS file lives at \"public/css/blog.css\" #}
+        <link rel=\"stylesheet\" href=\"{{ asset('css/template_superawesome.css') }}\"> ;
+\t\t{# <link rel=\"stylesheet\" href=\"../public/css/template_superawesome.css\">; #}
+\t\t{# the JS file lives at \"public/bundles/acme/js/loader.js\" #}
 
 
+\t\t{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+\t\t{% block stylesheets %}
+\t\t\t{{ encore_entry_link_tags('app')}}
+\t\t{% endblock %}
 
-        <body>
-            <div class=\"container\">
-                {% block body %}{% endblock %}
-            </div>
-        </body>
+\t\t{% block javascripts %}
+\t\t\t{{ encore_entry_script_tags('app')}}
+\t\t{% endblock %}
+\t</head>
+
+\t<body>
+{% block body %}{% endblock %}
+
+\t</body>
 
 
+<!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js\"></script>
+<script src=\"{{ asset('bundles/superAwesome/template.js') }}\"></script>
 
-        <!-- Footer -->
-        <footer class=\"text-center text-lg-start bg-light text-muted\">
-            <!-- Section: Social media -->
-            <section
-                class=\"d-flex justify-content-center justify-content-lg-between p-4 border-bottom\"
-            >
-                <!-- Left -->
-                <div class=\"me-5 d-none d-lg-block\">
-                <span>Get connected with us on social networks:</span>
-                </div>
-                <!-- Left -->
+{# <script src=\"{{ asset('bundles/superAwesome/html5shiv.js') }}\"> </script> #}
 
-                <!-- Right -->
-                <div>
-                <a href=\"\" class=\"me-4 text-reset\">
-                    <i class=\"fab fa-facebook-f\"></i>
-                </a>
-                <a href=\"\" class=\"me-4 text-reset\">
-                    <i class=\"fab fa-twitter\"></i>
-                </a>
-                <a href=\"\" class=\"me-4 text-reset\">
-                    <i class=\"fab fa-google\"></i>
-                </a>
-                <a href=\"\" class=\"me-4 text-reset\">
-                    <i class=\"fab fa-instagram\"></i>
-                </a>
-                <a href=\"\" class=\"me-4 text-reset\">
-                    <i class=\"fab fa-linkedin\"></i>
-                </a>
-                <a href=\"\" class=\"me-4 text-reset\">
-                    <i class=\"fab fa-github\"></i>
-                </a>
-                </div>
-                <!-- Right -->
-            </section>
-            <!-- Section: Social media -->
-
-            <!-- Section: Links  -->
-            <section class=\"\">
-                <div class=\"container text-center text-md-start mt-5\">
-                <!-- Grid row -->
-                <div class=\"row mt-3\">
-                    <!-- Grid column -->
-                    <div class=\"col-md-3 col-lg-4 col-xl-3 mx-auto mb-4\">
-                    <!-- Content -->
-                    <h6 class=\"text-uppercase fw-bold mb-4\">
-                        <i class=\"fas fa-gem me-3\"></i>Company name
-                    </h6>
-                    <p>
-                        Here you can use rows and columns to organize your footer content. Lorem ipsum
-                        dolor sit amet, consectetur adipisicing elit.
-                    </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class=\"col-md-2 col-lg-2 col-xl-2 mx-auto mb-4\">
-                    <!-- Links -->
-                    <h6 class=\"text-uppercase fw-bold mb-4\">
-                        Products
-                    </h6>
-                    <p>
-                        <a href=\"#!\" class=\"text-reset\">Angular</a>
-                    </p>
-                    <p>
-                        <a href=\"#!\" class=\"text-reset\">React</a>
-                    </p>
-                    <p>
-                        <a href=\"#!\" class=\"text-reset\">Vue</a>
-                    </p>
-                    <p>
-                        <a href=\"#!\" class=\"text-reset\">Laravel</a>
-                    </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class=\"col-md-3 col-lg-2 col-xl-2 mx-auto mb-4\">
-                    <!-- Links -->
-                    <h6 class=\"text-uppercase fw-bold mb-4\">
-                        Useful links
-                    </h6>
-                    <p>
-                        <a href=\"#!\" class=\"text-reset\">Pricing</a>
-                    </p>
-                    <p>
-                        <a href=\"#!\" class=\"text-reset\">Settings</a>
-                    </p>
-                    <p>
-                        <a href=\"#!\" class=\"text-reset\">Orders</a>
-                    </p>
-                    <p>
-                        <a href=\"#!\" class=\"text-reset\">Help</a>
-                    </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class=\"col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4\">
-                    <!-- Links -->
-                    <h6 class=\"text-uppercase fw-bold mb-4\">
-                        Contact
-                    </h6>
-                    <p><i class=\"fas fa-home me-3\"></i> New York, NY 10012, US</p>
-                    <p>
-                        <i class=\"fas fa-envelope me-3\"></i>
-                        info@example.com
-                    </p>
-                    <p><i class=\"fas fa-phone me-3\"></i> + 01 234 567 88</p>
-                    <p><i class=\"fas fa-print me-3\"></i> + 01 234 567 89</p>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
-                </div>
-            </section>
-            <!-- Section: Links  -->
-
-            <!-- Copyright -->
-            <div class=\"text-center p-4\" style=\"background-color: rgba(0, 0, 0, 0.05);\">
-                © 2021 Copyright:
-                <a class=\"text-reset fw-bold\" href=\"https://mdbootstrap.com/\">MDBootstrap.com</a>
-            </div>
-            <!-- Copyright -->
-        </footer>
-        <!-- Footer -->
-    </body>
 </html>
 ", "base_index.html.twig", "D:\\quentin\\www\\formation web afpa\\symfony\\progica\\templates\\base_index.html.twig");
     }

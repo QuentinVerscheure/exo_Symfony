@@ -143,7 +143,7 @@ class __TwigTemplate_4b6b873238f60db7362e9be3babd48196fc5a978b594c17ff453306d4e9
         foreach ($context['_seq'] as $context["_key"] => $context["gite"]) {
             // line 33
             echo "        <div class=\"card col-4\" style=\"width: 18rem;\">
-            <img class=\"card-img-top\" src=\"...\" alt=\"Card image cap\">
+            <img class=\"card-img-top\" src='build/img/architecture-1477098_960_720.jpg' alt=\"Card image cap\">
             <div class=\"card-body\">
                 <h5 class=\"card-title\">";
             // line 36
@@ -235,7 +235,7 @@ class __TwigTemplate_4b6b873238f60db7362e9be3babd48196fc5a978b594c17ff453306d4e9
     <div class=\"row justify-content-around\">
     {% for gite in gites %}
         <div class=\"card col-4\" style=\"width: 18rem;\">
-            <img class=\"card-img-top\" src=\"...\" alt=\"Card image cap\">
+            <img class=\"card-img-top\" src='build/img/architecture-1477098_960_720.jpg' alt=\"Card image cap\">
             <div class=\"card-body\">
                 <h5 class=\"card-title\">{{gite.name}}</h5>
                 <p class=\"card-text\">{{gite.description}}.</p>

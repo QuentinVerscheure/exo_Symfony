@@ -111,7 +111,7 @@ class __TwigTemplate_6b462793b2b4d4959dedf72fd73c3928cbaaa8784b81a79314eb174a933
     <div class=\"col-md-6\">
         ";
         // line 20
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 20, $this->source); })()), "equipement", [], "any", false, false, false, 20), 'row');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 20, $this->source); })()), "equipements", [], "any", false, false, false, 20), 'row');
         echo "
     </div>
 </div>
@@ -219,7 +219,7 @@ class __TwigTemplate_6b462793b2b4d4959dedf72fd73c3928cbaaa8784b81a79314eb174a933
         {{ form_row(formGite.localisation) }}
     </div>
     <div class=\"col-md-6\">
-        {{ form_row(formGite.equipement) }}
+        {{ form_row(formGite.equipements) }}
     </div>
 </div>
 <div class=\"row\">

@@ -108,13 +108,9 @@ class __TwigTemplate_4c5b49e53a712c7961ec0c1394bf21a8a86302ef84c7158ebd5efc73288
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 17, $this->source); })()), "localisation", [], "any", false, false, false, 17), 'row');
         echo "
     </div>
-    <div class=\"col-md-6\">
-        ";
-        // line 20
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 20, $this->source); })()), "equipement", [], "any", false, false, false, 20), 'row');
-        echo "
-    </div>
-</div>
+    ";
+        // line 22
+        echo "</div>
 <div class=\"row\">
     <div class=\"col-md-4\">
         ";
@@ -195,7 +191,7 @@ class __TwigTemplate_4c5b49e53a712c7961ec0c1394bf21a8a86302ef84c7158ebd5efc73288
 
     public function getDebugInfo()
     {
-        return array (  173 => 55,  162 => 47,  156 => 44,  148 => 39,  142 => 36,  134 => 31,  128 => 28,  122 => 25,  114 => 20,  108 => 17,  100 => 12,  93 => 8,  88 => 5,  78 => 4,  59 => 3,  36 => 1,);
+        return array (  169 => 55,  158 => 47,  152 => 44,  144 => 39,  138 => 36,  130 => 31,  124 => 28,  118 => 25,  113 => 22,  108 => 17,  100 => 12,  93 => 8,  88 => 5,  78 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -218,9 +214,9 @@ class __TwigTemplate_4c5b49e53a712c7961ec0c1394bf21a8a86302ef84c7158ebd5efc73288
     <div class=\"col-md-6\">
         {{ form_row(formGite.localisation) }}
     </div>
-    <div class=\"col-md-6\">
-        {{ form_row(formGite.equipement) }}
-    </div>
+    {# <div class=\"col-md-6\">
+        {{ form_row(formGite.equipements) }}
+    </div> #}
 </div>
 <div class=\"row\">
     <div class=\"col-md-4\">

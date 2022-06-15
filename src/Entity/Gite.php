@@ -93,9 +93,14 @@ class Gite
     private $Pets;
 
     /**
-     * @ORM\ManyToMany(targetEntity=equipement::class, inversedBy="gites")
+     * @ORM\ManyToMany(targetEntity=Equipement::class, inversedBy="gites")
      */
     private $equipements;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $picture;
 
     public function __construct()
     {
@@ -235,6 +240,18 @@ class Gite
     public function removeEquipement(equipement $equipement): self
     {
         $this->equipements->removeElement($equipement);
+
+        return $this;
+    }
+
+    public function getPicture(): ?string
+    {
+        return $this->picture;
+    }
+
+    public function setPicture(?string $picture): self
+    {
+        $this->picture = $picture;
 
         return $this;
     }

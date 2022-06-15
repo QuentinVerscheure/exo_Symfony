@@ -153,7 +153,7 @@ class __TwigTemplate_b2c5de41934fe725d3b10db5f4bc9697564bdd2cb7815d153be74f51e42
 
 \t\t<!-- Footer -->
 \t\t<footer
-\t\t\tclass=\"text-center text-lg-start bg-light text-muted\">
+\t\t\tclass=\"text-center text-lg-start bg-light text-muted mt-5\">
 \t\t\t<!-- Section: Social media -->
 \t\t\t<section
 \t\t\t\tclass=\"d-flex justify-content-center justify-content-lg-between p-4 border-bottom\">
@@ -477,7 +477,7 @@ class __TwigTemplate_b2c5de41934fe725d3b10db5f4bc9697564bdd2cb7815d153be74f51e42
 
 \t\t<!-- Footer -->
 \t\t<footer
-\t\t\tclass=\"text-center text-lg-start bg-light text-muted\">
+\t\t\tclass=\"text-center text-lg-start bg-light text-muted mt-5\">
 \t\t\t<!-- Section: Social media -->
 \t\t\t<section
 \t\t\t\tclass=\"d-flex justify-content-center justify-content-lg-between p-4 border-bottom\">

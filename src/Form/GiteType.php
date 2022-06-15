@@ -2,6 +2,7 @@
 
 namespace App\Form;
 
+use App\Entity\Equipement;
 use App\Entity\Gite;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
@@ -24,7 +25,7 @@ class GiteType extends AbstractType
             ->add('numberOfBed')
             ->add('equipements', EntityType::class, [
                 "class" => Equipement::class,
-                "choise_label" => "name",
+                "choice_label" => "name",
                 "multiple" => true,
                 "expanded" => true
             ])
