@@ -32,3 +32,11 @@ d4310a,::1,GET,http://localhost:8000/recherche-gite,1655315340,,200
 494823,::1,GET,http://localhost:8000/contact,1655315342,,200
 15bf98,::1,GET,http://localhost:8000/admin,1655315344,,200
 eb6ec6,::1,GET,http://localhost:8000/,1655315370,,200
+0d21c8,::1,GET,http://localhost:8000/recherche-gite,1655324023,,200
+b9f38f,::1,GET,http://localhost:8000/admin,1655324028,,302
+ec6713,::1,GET,http://localhost:8000/login,1655324028,,200
+1e4f51,::1,POST,http://localhost:8000/login,1655324031,,302
+0687d0,::1,GET,http://localhost:8000/admin,1655324031,,200
+879707,::1,GET,http://localhost:8000/admin/gite/create,1655324033,,200
+e034f2,::1,POST,http://localhost:8000/admin/gite/create,1655324057,,302
+ace18f,::1,GET,http://localhost:8000/admin,1655324057,,200
