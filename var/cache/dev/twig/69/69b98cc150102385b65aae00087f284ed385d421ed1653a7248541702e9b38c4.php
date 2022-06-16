@@ -108,54 +108,52 @@ class __TwigTemplate_4c5b49e53a712c7961ec0c1394bf21a8a86302ef84c7158ebd5efc73288
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 17, $this->source); })()), "localisation", [], "any", false, false, false, 17), 'row');
         echo "
     </div>
-    ";
-        // line 22
-        echo "</div>
+</div>
 <div class=\"row\">
     <div class=\"col-md-4\">
         ";
-        // line 25
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 25, $this->source); })()), "numberOfBedroom", [], "any", false, false, false, 25), 'row');
+        // line 22
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 22, $this->source); })()), "numberOfBedroom", [], "any", false, false, false, 22), 'row');
         echo "
     </div>
     <div class=\"col-md-4\">
         ";
-        // line 28
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 28, $this->source); })()), "numberOfBed", [], "any", false, false, false, 28), 'row');
+        // line 25
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 25, $this->source); })()), "numberOfBed", [], "any", false, false, false, 25), 'row');
         echo "
     </div>
         <div class=\"col-md-4\">
         ";
-        // line 31
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 31, $this->source); })()), "surface", [], "any", false, false, false, 31), 'row');
+        // line 28
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 28, $this->source); })()), "surface", [], "any", false, false, false, 28), 'row');
         echo "
     </div>
 </div>
 <div class=\"row\">
+    <div class=\"col-md-6\">
+        ";
+        // line 33
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 33, $this->source); })()), "contact", [], "any", false, false, false, 33), 'row');
+        echo "
+    </div>
     <div class=\"col-md-6\">
         ";
         // line 36
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 36, $this->source); })()), "contact", [], "any", false, false, false, 36), 'row');
-        echo "
-    </div>
-    <div class=\"col-md-6\">
-        ";
-        // line 39
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 39, $this->source); })()), "scheduleContact", [], "any", false, false, false, 39), 'row');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 36, $this->source); })()), "scheduleContact", [], "any", false, false, false, 36), 'row');
         echo "
     </div>
 </div>
 <div class=\"row\">
     <div class=\"col-md-12\">
         ";
-        // line 44
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 44, $this->source); })()), "description", [], "any", false, false, false, 44), 'row');
+        // line 41
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 41, $this->source); })()), "description", [], "any", false, false, false, 41), 'row');
         echo "
     </div>
     <div class=\"col-md-12\">
         ";
-        // line 47
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 47, $this->source); })()), "Pets", [], "any", false, false, false, 47), 'row');
+        // line 44
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 44, $this->source); })()), "Pets", [], "any", false, false, false, 44), 'row');
         echo "
     </div>
 </div>
@@ -165,8 +163,8 @@ class __TwigTemplate_4c5b49e53a712c7961ec0c1394bf21a8a86302ef84c7158ebd5efc73288
 </div>
 
 ";
-        // line 55
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 55, $this->source); })()), 'form_end');
+        // line 52
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["formGite"]) || array_key_exists("formGite", $context) ? $context["formGite"] : (function () { throw new RuntimeError('Variable "formGite" does not exist.', 52, $this->source); })()), 'form_end');
         echo "
 
 
@@ -191,7 +189,7 @@ class __TwigTemplate_4c5b49e53a712c7961ec0c1394bf21a8a86302ef84c7158ebd5efc73288
 
     public function getDebugInfo()
     {
-        return array (  169 => 55,  158 => 47,  152 => 44,  144 => 39,  138 => 36,  130 => 31,  124 => 28,  118 => 25,  113 => 22,  108 => 17,  100 => 12,  93 => 8,  88 => 5,  78 => 4,  59 => 3,  36 => 1,);
+        return array (  167 => 52,  156 => 44,  150 => 41,  142 => 36,  136 => 33,  128 => 28,  122 => 25,  116 => 22,  108 => 17,  100 => 12,  93 => 8,  88 => 5,  78 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -214,9 +212,6 @@ class __TwigTemplate_4c5b49e53a712c7961ec0c1394bf21a8a86302ef84c7158ebd5efc73288
     <div class=\"col-md-6\">
         {{ form_row(formGite.localisation) }}
     </div>
-    {# <div class=\"col-md-6\">
-        {{ form_row(formGite.equipements) }}
-    </div> #}
 </div>
 <div class=\"row\">
     <div class=\"col-md-4\">

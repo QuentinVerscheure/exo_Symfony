@@ -18,6 +18,8 @@ return array(
     'App\\Entity\\Gite' => $baseDir . '/src/Entity/Gite.php',
     'App\\Entity\\GiteSearch' => $baseDir . '/src/Entity/GiteSearch.php',
     'App\\Entity\\User' => $baseDir . '/src/Entity/User.php',
+    'App\\Entity\\contact' => $baseDir . '/src/Entity/contact.php',
+    'App\\Form\\ContactType' => $baseDir . '/src/Form/ContactType.php',
     'App\\Form\\GiteSearchType' => $baseDir . '/src/Form/GiteSearchType.php',
     'App\\Form\\GiteType' => $baseDir . '/src/Form/GiteType.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',

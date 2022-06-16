@@ -29,9 +29,10 @@ superawesome: https://gettemplate.com/demo/superawesome/
 ## <ins>a faire</ins>
 
 - [ ] cacher les liens non accessible en fonction du log in
-- [ ] corriger nom gite.qqch \templates\rechercheGite.html.twig l40
 - [ ] randomise the fist page entity from DB
-- [ ] decouper le nom des images de la db https://stackoverflow.com/questions/38992935/twig-split-a-string-after-first-specific-character-as-delimiter
+- [ ] lier gite et user
+- [ ] formulaire de contact dans page du gite
+- [ ] creer un insert img dans formulaire (https://symfony.com/bundles/EasyAdminBundle/2.x/integration/vichuploaderbundle.html)
 
 ## <ins>commande:</ins>
 

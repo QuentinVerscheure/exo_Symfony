@@ -32,7 +32,7 @@ class __TwigTemplate_dd98840037723e30717d9ad5f8dcebf275d24ded639fdb75a2972c2acb9
 
     protected function doGetParent(array $context)
     {
-        // line 3
+        // line 1
         return "base_index.html.twig";
     }
 
@@ -45,7 +45,7 @@ class __TwigTemplate_dd98840037723e30717d9ad5f8dcebf275d24ded639fdb75a2972c2acb9
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "index.html.twig"));
 
-        $this->parent = $this->loadTemplate("base_index.html.twig", "index.html.twig", 3);
+        $this->parent = $this->loadTemplate("base_index.html.twig", "index.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -55,7 +55,7 @@ class __TwigTemplate_dd98840037723e30717d9ad5f8dcebf275d24ded639fdb75a2972c2acb9
 
     }
 
-    // line 5
+    // line 3
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -74,7 +74,7 @@ class __TwigTemplate_dd98840037723e30717d9ad5f8dcebf275d24ded639fdb75a2972c2acb9
 
     }
 
-    // line 6
+    // line 4
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -84,10 +84,10 @@ class __TwigTemplate_dd98840037723e30717d9ad5f8dcebf275d24ded639fdb75a2972c2acb9
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 7
+        // line 5
         echo "
     ";
-        // line 22
+        // line 20
         echo "
 <!-- Header -->
 <header class=\"header\">
@@ -104,7 +104,7 @@ class __TwigTemplate_dd98840037723e30717d9ad5f8dcebf275d24ded639fdb75a2972c2acb9
 \t\t\t\t\t<br>
 \t\t\t\t
                     <a href=\"";
-        // line 37
+        // line 35
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("recherche-gite");
         echo "\" class=\"btn btn-lg btn-default\">Trouvez le gite de vos rêves maintenant</a>
 \t\t\t</div>
@@ -236,14 +236,12 @@ class __TwigTemplate_dd98840037723e30717d9ad5f8dcebf275d24ded639fdb75a2972c2acb9
 
     public function getDebugInfo()
     {
-        return array (  108 => 37,  91 => 22,  88 => 7,  78 => 6,  59 => 5,  36 => 3,);
+        return array (  108 => 35,  91 => 20,  88 => 5,  78 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("
-
-{% extends \"base_index.html.twig\" %}
+        return new Source("{% extends \"base_index.html.twig\" %}
 
 {% block title %} Progica {% endblock %}
 {% block body %}

@@ -633,6 +633,8 @@ class ComposerStaticInit972cd45da1d5577294247b16847cb67f
         'App\\Entity\\Gite' => __DIR__ . '/../..' . '/src/Entity/Gite.php',
         'App\\Entity\\GiteSearch' => __DIR__ . '/../..' . '/src/Entity/GiteSearch.php',
         'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
+        'App\\Entity\\contact' => __DIR__ . '/../..' . '/src/Entity/contact.php',
+        'App\\Form\\ContactType' => __DIR__ . '/../..' . '/src/Form/ContactType.php',
         'App\\Form\\GiteSearchType' => __DIR__ . '/../..' . '/src/Form/GiteSearchType.php',
         'App\\Form\\GiteType' => __DIR__ . '/../..' . '/src/Form/GiteType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',

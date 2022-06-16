@@ -84,6 +84,51 @@ class __TwigTemplate_7cf278ea7e785dee277db07794756af256d9820eb240025703606fbe008
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
+        // line 5
+        echo "
+";
+        // line 6
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 6, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 6));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 7
+            echo "    <div class=\"col-md-4 mt-3\">
+        <div class=\"alert alert-success\">
+            ";
+            // line 9
+            echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+            echo "
+        </div>
+    </div>
+";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 13
+        echo "
+<h1>Formulaire de contact</h1>
+
+<div class=\"row\">
+    <div class=\"col-md-6\">
+    ";
+        // line 18
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), 'form_start');
+        echo "
+        ";
+        // line 19
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 19, $this->source); })()), 'rest');
+        echo "
+
+        <input type=\"submit\" class=\"btn btn-success\" value=\"Envoyer\">
+    ";
+        // line 22
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 22, $this->source); })()), 'form_end');
+        echo "
+    </div>
+</div>
+
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -104,7 +149,7 @@ class __TwigTemplate_7cf278ea7e785dee277db07794756af256d9820eb240025703606fbe008
 
     public function getDebugInfo()
     {
-        return array (  78 => 4,  59 => 3,  36 => 1,);
+        return array (  126 => 22,  120 => 19,  116 => 18,  109 => 13,  99 => 9,  95 => 7,  91 => 6,  88 => 5,  78 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -112,6 +157,28 @@ class __TwigTemplate_7cf278ea7e785dee277db07794756af256d9820eb240025703606fbe008
         return new Source("{% extends \"base.html.twig\" %}
 
 {% block title %} contact {% endblock %}
-{% block body %}{% endblock %}", "contact.html.twig", "D:\\quentin\\www\\formation web afpa\\symfony\\progica\\templates\\contact.html.twig");
+{% block body %}
+
+{% for message in app.flashes('success') %}
+    <div class=\"col-md-4 mt-3\">
+        <div class=\"alert alert-success\">
+            {{ message }}
+        </div>
+    </div>
+{% endfor %}
+
+<h1>Formulaire de contact</h1>
+
+<div class=\"row\">
+    <div class=\"col-md-6\">
+    {{ form_start(form) }}
+        {{ form_rest(form) }}
+
+        <input type=\"submit\" class=\"btn btn-success\" value=\"Envoyer\">
+    {{ form_end(form) }}
+    </div>
+</div>
+
+{% endblock %}", "contact.html.twig", "D:\\quentin\\www\\formation web afpa\\symfony\\progica\\templates\\contact.html.twig");
     }
 }

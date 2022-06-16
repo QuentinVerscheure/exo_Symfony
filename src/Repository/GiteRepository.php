@@ -59,17 +59,17 @@ class GiteRepository extends ServiceEntityRepository
         }
         if ($search->getMinnumberOfBedroom()) {
             $query = $query
-            ->andWhere("g.number_of_bedroom >= :minnumberOfBedroom")
+            ->andWhere("g.numberOfBedroom >= :minnumberOfBedroom")
             ->setParameter('minnumberOfBedroom', $search->getMinnumberOfBedroom());
         }
         if ($search->getMinnumberOfBed()) {
             $query = $query
-            ->andWhere("g.number_Of_bed >= :minnumberOfBed")
+            ->andWhere("g.numbedsrOfBed >= :minnumberOfBed")
             ->setParameter('minnumberOfBed', $search->getMinnumberOfBed());
         }
         if ($search->getIsOkPets()) {
             $query = $query
-            ->andWhere("g.pets = :isOkPets")
+            ->andWhere("g.Pets = :isOkPets")
             ->setParameter('isOkPets', $search->getIsOkPets());
         }
         $query = $query

@@ -388,11 +388,17 @@
       <tag name="doctrine.fixture.orm"/>
       <argument type="service" id="security.user_password_hasher"/>
     </service>
+    <service id="App\Form\ContactType" class="App\Form\ContactType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\GiteSearchType" class="App\Form\GiteSearchType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
     <service id="App\Form\GiteType" class="App\Form\GiteType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
+    </service>
+    <service id="App\Notification\ContactNotification" class="App\Notification\ContactNotification" autowire="true" autoconfigure="true">
+      <argument type="service" id="mailer.mailer"/>
     </service>
     <service id="App\Repository\EquipementRepository" class="App\Repository\EquipementRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
@@ -1156,6 +1162,7 @@
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>App\Form\ContactType</argument>
         <argument>App\Form\GiteSearchType</argument>
         <argument>App\Form\GiteType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
@@ -3312,7 +3319,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension">
-      <argument type="service" id=".service_locator.qHeVyQ4"/>
+      <argument type="service" id=".service_locator.nEcvuMv"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -6268,6 +6275,8 @@
     <service id=".abstract.instanceof.App\DataFixtures\GiteFixtures" class="App\DataFixtures\GiteFixtures" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\FixturesBundle\ORMFixtureInterface.0.App\DataFixtures\UserFixtures" class="App\DataFixtures\UserFixtures" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\DataFixtures\UserFixtures" class="App\DataFixtures\UserFixtures" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\ContactType" class="App\Form\ContactType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\ContactType" class="App\Form\ContactType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\GiteSearchType" class="App\Form\GiteSearchType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\GiteSearchType" class="App\Form\GiteSearchType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\GiteType" class="App\Form\GiteType" autowire="true" abstract="true"/>
@@ -6625,7 +6634,13 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator.Blwv5zG" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.XheqsZu" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="notification" type="service_closure" id="App\Notification\ContactNotification"/>
+      </argument>
+    </service>
+    <service id=".service_locator.K.gCbSH" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\Admin\adminController::create" type="service_closure" id=".service_locator.T7xmfzk"/>
@@ -6634,6 +6649,7 @@
         <argument key="App\Controller\Admin\adminController::index" type="service_closure" id=".service_locator.T7xmfzk"/>
         <argument key="App\Controller\GiteController::show" type="service_closure" id=".service_locator.T7xmfzk"/>
         <argument key="App\Controller\SecurityController::login" type="service_closure" id=".service_locator.UDgw6Ol"/>
+        <argument key="App\Controller\homeController::contact" type="service_closure" id=".service_locator.XheqsZu"/>
         <argument key="App\Controller\homeController::index" type="service_closure" id=".service_locator.T7xmfzk"/>
         <argument key="App\Controller\homeController::rechercheGite" type="service_closure" id=".service_locator.T7xmfzk"/>
         <argument key="App\Kernel::loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
@@ -6648,6 +6664,7 @@
         <argument key="App\Controller\Admin\adminController:index" type="service_closure" id=".service_locator.T7xmfzk"/>
         <argument key="App\Controller\GiteController:show" type="service_closure" id=".service_locator.T7xmfzk"/>
         <argument key="App\Controller\SecurityController:login" type="service_closure" id=".service_locator.UDgw6Ol"/>
+        <argument key="App\Controller\homeController:contact" type="service_closure" id=".service_locator.XheqsZu"/>
         <argument key="App\Controller\homeController:index" type="service_closure" id=".service_locator.T7xmfzk"/>
         <argument key="App\Controller\homeController:rechercheGite" type="service_closure" id=".service_locator.T7xmfzk"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
@@ -6714,9 +6731,10 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.qHeVyQ4" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.nEcvuMv" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Form\ContactType" type="service_closure" id="App\Form\ContactType"/>
         <argument key="App\Form\GiteSearchType" type="service_closure" id="App\Form\GiteSearchType"/>
         <argument key="App\Form\GiteType" type="service_closure" id="App\Form\GiteType"/>
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service_closure" id="form.type.entity"/>
@@ -7263,12 +7281,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.Blwv5zG"/>
+      <argument type="service" id=".service_locator.K.gCbSH"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.Blwv5zG"/>
+      <argument type="service" id=".service_locator.K.gCbSH"/>
     </service>
     <service id="debug.traced.messenger.bus.default.inner" class="Symfony\Component\Messenger\MessageBus">
       <argument type="iterator">
@@ -8218,7 +8236,7 @@
     <service id="sensio_framework_extra.security.expression_language" alias="sensio_framework_extra.security.expression_language.default"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.Blwv5zG"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.K.gCbSH"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -8243,9 +8261,9 @@
     <service id=".service_locator.XDGmiR3" alias=".1_ServiceLocator~q_lemwJ"/>
     <service id=".service_locator.0GV1BZZ" alias=".service_locator.gSv9zYw"/>
     <service id=".service_locator.xBZzMSG" alias=".service_locator.a4.yDU4"/>
-    <service id=".service_locator.h83h6wm" alias=".service_locator.Blwv5zG"/>
+    <service id=".service_locator.AGRabRh" alias=".service_locator.K.gCbSH"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.19_mNxd"/>
-    <service id=".service_locator.JU.QLGu" alias=".service_locator.qHeVyQ4"/>
+    <service id=".service_locator.3yiUSF6" alias=".service_locator.nEcvuMv"/>
     <service id=".service_locator.nk0lT0X" alias=".service_locator.1kmbKC8"/>
     <service id=".service_locator.O24_MAy" alias=".service_locator.yY.p4P7"/>
     <service id=".service_locator.W9y3dzm" alias=".service_locator.GNc8e5B"/>
@@ -8275,6 +8293,7 @@
     <service id=".service_locator.T8.TLJR" alias=".service_locator.T7xmfzk"/>
     <service id=".service_locator.gVA9yoD" alias=".service_locator.a4.yDU4"/>
     <service id=".service_locator.kXCVHeG" alias=".service_locator.UDgw6Ol"/>
+    <service id=".service_locator.HDRm1bM" alias=".service_locator.XheqsZu"/>
     <service id=".service_locator.Wd_D6Iy" alias=".service_locator.GNc8e5B"/>
     <service id=".service_locator.L0rFhJm" alias=".service_locator.GVyCdgr"/>
     <service id=".service_locator.9YCWxeJ" alias=".service_locator.dw8O4oN"/>
